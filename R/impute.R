@@ -1,9 +1,7 @@
-#' @title impute: filling in missing data
+#' @title Impute missing data
 #'
 #' @description
-#' This \code{impute} function is used to fill in the missing values of a data frame using a specified method
-#' from the following three: knn, missForest or mice. If the method input is not one of the three previously
-#' listed, then the function will throw an error.
+#' This \code{impute} function is used impute the missing values of a data frame using a knn, missForest or mice approach.
 #'
 #' @details
 #' The impute function is a wrapper for the following functions:
@@ -27,8 +25,6 @@
 #' new_df <- impute(airquality, "missForest")
 #' new_df <- impute(airquality, "mice")
 #'
-#' # if the specified method is not among the listed three, an error will be reported
-#' new_df <- impute(airquality, "randomforest")
 #' @export
 #'
 

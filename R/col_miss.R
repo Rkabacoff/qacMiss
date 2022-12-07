@@ -1,22 +1,21 @@
-#' col_miss
+#' Plot missing data by variable
 #'
-#' Plotting missing variables and displaying the proportion
-#' of missing variables by column
+#' Plot the amount of missing data by variable
 #'
-#' @param x A dataframe
+#' @param data A dataframe
 #' @import ggplot2 dplyr
 #'
-#' @return ggplot bar plot, if no missing data returns a message
+#' @return ggplot2 graph
 #' @examples
 #' data(mtcars2)
 #' col_miss(mtcars2)
 #' @export
 #'
-col_miss <- function(x){
-  len = nrow(x)
-  if(!any(is.na(x)))return(cat("No missing data"))
+col_miss <- function(data){
+  len = nrow(data)
+  if(!any(is.na(data)))return(cat("No missing data"))
 
-  columnSums <- colSums(is.na(x))
+  columnSums <- colSums(is.na(data))
   missing_df  = data.frame(missing_vals = columnSums,
                            total = len)
 

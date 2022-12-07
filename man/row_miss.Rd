@@ -2,18 +2,18 @@
 % Please edit documentation in R/row_miss.R
 \name{row_miss}
 \alias{row_miss}
-\title{Row Chart}
+\title{Plot missing data by row}
 \usage{
-row_miss(df)
+row_miss(data)
 }
 \arguments{
-\item{df}{}
+\item{data}{}
 }
 \value{
-bar chart of missing values per case
+ggplot2 graph
 }
 \description{
-This \code{row_miss} returns a bar chart that shows you the missing values per case.
+Plotting the amount of missing data by observation
 }
 \examples{
 data(mtcars2)

@@ -2,19 +2,18 @@
 % Please edit documentation in R/col_miss.R
 \name{col_miss}
 \alias{col_miss}
-\title{col_miss}
+\title{Plot missing data by variable}
 \usage{
-col_miss(x)
+col_miss(data)
 }
 \arguments{
-\item{x}{A dataframe}
+\item{data}{A dataframe}
 }
 \value{
-ggplot bar plot, if no missing data returns a message
+ggplot2 graph
 }
 \description{
-Plotting missing variables and displaying the proportion
-of missing variables by column
+Plot the amount of missing data by variable
 }
 \examples{
 data(mtcars2)

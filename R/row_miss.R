@@ -1,26 +1,26 @@
-#' Row Chart
+#' Plot missing data by row
 #'
-#' @param df
+#' @param data
 #'
 #' @description
-#' This \code{row_miss} returns a bar chart that shows you the missing values per case.
+#' Plotting the amount of missing data by observation
 #'
-#' @return bar chart of missing values per case
+#' @return ggplot2 graph
 #' @export
 #' @import ggplot2
 #' @examples
 #' data(mtcars2)
 #' row_miss(mtcars2)
 
-row_miss <- function(df){
-  if(!any(is.na(df)))retun(cat("No missing data."))
-  rn <- rownames(df)
-  cn <- colnames(df)
+row_miss <- function(data){
+  if(!any(is.na(data)))retun(cat("No missing data."))
+  rn <- rownames(data)
+  cn <- colnames(data)
   mydf <- data.frame()
   for(row in rn){
     num <- 0
     for(column in cn){
-      if(is.na(df[row,column])){
+      if(is.na(data[row,column])){
         num <- num+1
       }
     }
